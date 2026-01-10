@@ -20,6 +20,29 @@ Useful links:
 * [ZMK documentation](https://zmk.dev/docs)
 * [ZMK repository](https://github.com/zmkfirmware/zmk)
 
+## ZMK CLI
+ZMK CLI is the simplest way to setup config repository with
+required modules.
+
+Setup:
+1. Create a repository from [unified-zmk-config-template](https://github.com/zmkfirmware/unified-zmk-config-template)
+2. [Install ZMK CLI](https://zmk.dev/docs/user-setup#install-zmk-cli)
+3. Run `zmk init` and use URL from repository created in 1st step
+4. Add required modules
+   ```
+   zmk module add https://github.com/dani0854/zmk-keyboard-piantor
+   zmk module add https://github.com/dani0854/zmk-component-rpi-pico
+   ```
+   `zmk-component-rpi-pico` module is only needed for hardware metadata files
+   since they are currently not in-tree. This should change in v0.4.0, and this
+   module will no longer be needed.
+5. Add keyboard `zmk keyboard add -k piantor -c rpi_pico`
+
+After that you can edit keymap, commit everything and push, firmware will be
+built in GitHub actions. You can even use zmk cli to download built firmware.
+
+[ZMK CLI documentation](https://zmk.dev/docs/zmk-cli)
+
 ## Building
 ### GitHub Actions
 Prebuilt firmware is available in GitHub actions artifacts. However, default

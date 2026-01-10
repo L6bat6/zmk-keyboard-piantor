@@ -1,5 +1,7 @@
 name: zmk-keyboard-piantor
 
 build:
+  depends:
+    - zmk-component-rpi-pico
   settings:
     board_root: .
