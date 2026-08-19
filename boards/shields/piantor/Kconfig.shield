@@ -1,5 +1,6 @@
-config SHIELD_PIANTOR_LEFT
-    def_bool $(shields_list_contains,piantor_left)
-
-config SHIELD_PIANTOR_RIGHT
-    def_bool $(shields_list_contains,piantor_right)
+config SHIELD_PIANTOR
+    bool "Corne 2.1 (sparkfun_pro_micro_rp2040)"
+    select ZMK
+    select ZMK_USB
+    help
+      Corne 2.1 shield configuration for SparkFun Pro Micro RP2040.
