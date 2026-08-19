@@ -4,6 +4,5 @@
 # to the `include` property. You can also use the `cmake-args` property to
 # pass flags to the build command, `snippet` to add a Zephyr snippet, and
 # `artifact-name` to assign a name to distinguish build outputs from each other:
-#
-board: [ "rpi_pico" ]
-shield: [ "piantor_left", "piantor_right" ]
+board: [ "sparkfun_pro_micro_rp2040//zmk" ]
+shield: [ "corne_left", "corne_right" ]
