@@ -1,16 +1,5 @@
-if SHIELD_PIANTOR_LEFT
-
-config ZMK_KEYBOARD_NAME
-    default "Piantor"
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif
-
-if SHIELD_PIANTOR_LEFT || SHIELD_PIANTOR_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-endif
+# Kconfig.defconfig
+# Minimal Kconfig for Corne 2.1 target using SparkFun Pro Micro RP2040
+# Adjust as needed for your build system.
+CONFIG_BOARD="sparkfun_pro_micro_rp2040"
+CONFIG_ZMK_KEYMAP=y
